@@ -36,9 +36,7 @@ const Header: React.FC = () => {
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
           </nav>
 
-          <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all transform hover:scale-105">
-            Get Started
-          </button>
+
 
           {/* Mobile Menu Button */}
           <button 
