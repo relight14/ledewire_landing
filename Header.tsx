@@ -38,13 +38,7 @@ const Header: React.FC = () => {
 
 
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-700"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+         
         </div>
 
         {/* Mobile Navigation */}
@@ -72,11 +66,7 @@ const Header: React.FC = () => {
               >
                 Contact
               </a>
-              <button 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all w-full"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
+              
               </button>
             </nav>
           </div>
