@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +24,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
+          {/* Logo and Brand */}
           <div className="flex items-center">
             <BookOpen className="w-8 h-8 text-blue-600 mr-2" />
             <span className="text-xl font-bold tracking-tight">LedeWire</span>
@@ -35,15 +36,11 @@ const Header: React.FC = () => {
             <a href="#values" className="text-gray-700 hover:text-blue-600 transition-colors">Our Values</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
           </nav>
-
-
-
-         
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 animate-fadeIn">
+          <div className="md:hidden pt-4 pb-2">
             <nav className="flex flex-col space-y-4">
               <a 
                 href="#about" 
@@ -66,8 +63,6 @@ const Header: React.FC = () => {
               >
                 Contact
               </a>
-              
-              </button>
             </nav>
           </div>
         )}
