@@ -30,7 +30,7 @@ const Header: React.FC = () => {
               src={Logo} 
               alt="LedeWire Logo"
               className={`transition-all duration-300 ${
-                isScrolled ? 'w-46' : 'w-58'
+                isScrolled ? 'w-26' : 'w-38'
               }`}
             />
           </div>
