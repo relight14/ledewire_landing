@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/LedeWireLogo.png'; // <- adjust if needed
+import Logo from '../assets/LedeWireLogo.png'; // Adjust this path if needed
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,12 +24,14 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo and Brand */}
           <div className="flex items-center">
             <img 
-              src={logo} 
-              alt="LedeWire Logo" 
-              className="h-10 w-auto" 
+              src={Logo} 
+              alt="LedeWire Logo"
+              className={`transition-all duration-300 ${
+                isScrolled ? 'w-24' : 'w-32'
+              }`}
             />
           </div>
 
