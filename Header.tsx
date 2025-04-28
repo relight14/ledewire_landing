@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BookOpen } from 'lucide-react';
+import logo from '../assets/LedeWireLogo.png'; // <- adjust if needed
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +24,13 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          {/* Logo and Brand */}
+          {/* Logo */}
           <div className="flex items-center">
-            <BookOpen className="w-8 h-8 text-blue-600 mr-2" />
-            <span className="text-xl font-bold tracking-tight">LedeWire</span>
+            <img 
+              src={logo} 
+              alt="LedeWire Logo" 
+              className="h-10 w-auto" 
+            />
           </div>
 
           {/* Desktop Navigation */}
