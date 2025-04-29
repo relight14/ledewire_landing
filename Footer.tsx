@@ -1,7 +1,6 @@
 import React from 'react';
-import { BookOpen, Github, Twitter, Mail } from 'lucide-react';
-import Logo from '../assets/LedeWireLogo.png'; // or wherever it's located
-
+import { Github, Twitter, Mail } from 'lucide-react';
+import Logo from '../assets/LedeWireLogo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -11,11 +10,13 @@ const Footer: React.FC = () => {
           {/* Brand & Mission */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <img
-                src={Logo}
-                alt="LedeWire Logo"
-                className={`max-h-12 md:max-h-16 object-contain transition-all duration-300`}
+              {Logo && (
+                <img
+                  src={Logo}
+                  alt="LedeWire Logo"
+                  className="max-h-12 md:max-h-16 object-contain transition-all duration-300"
                 />
+              )}
             </div>
             <p className="text-sm text-ink/80 max-w-md">
               Making thoughtful, unbiased content accessible through simple micropayments — creating a frictionless experience for both writers and readers.
