@@ -10,11 +10,11 @@ interface ValueCardProps {
 
 const ValueCard: React.FC<ValueCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-8 transition-all duration-300 hover:shadow-lg">
-      <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+    <div className="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl transform hover:scale-105">
+      <div className="bg-highlight w-14 h-14 rounded-lg flex items-center justify-center text-white mb-6">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-900">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </div>
   );
@@ -40,14 +40,14 @@ const ValuesSection: React.FC = () => {
   ];
 
   return (
-    <Section id="values" className="bg-gray-50 relative">
+    <Section id="values" className="bg-gray-50 relative py-24">
       {/* Decorative elements */}
-      <div className="absolute -left-20 bottom-40 w-40 h-40 bg-indigo-100 rounded-full opacity-70 blur-2xl"></div>
-      <div className="absolute -right-10 top-20 w-32 h-32 bg-blue-100 rounded-full opacity-70 blur-xl"></div>
+      <div className="absolute -left-20 bottom-40 w-48 h-48 bg-indigo-100 rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute -right-10 top-20 w-40 h-40 bg-blue-100 rounded-full opacity-70 blur-xl"></div>
       
       <div className="relative">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Our Values
           </h2>
           <p className="text-xl text-gray-700">
@@ -55,7 +55,7 @@ const ValuesSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {values.map((value, index) => (
             <ValueCard 
               key={index} 
@@ -66,14 +66,14 @@ const ValuesSection: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-white rounded-xl shadow-md p-8 max-w-3xl mx-auto">
-          <blockquote className="text-gray-700 italic">
+        <div className="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto">
+          <blockquote className="text-gray-700 italic text-lg">
             "We believe in a world where quality content is universally accessible, fairly compensated, and free from the gatekeeping that limits the flow of important ideas."
           </blockquote>
           <div className="mt-4 flex items-center">
             <div className="h-px flex-1 bg-gray-200"></div>
             <div className="px-4">
-              <BookOpen className="w-6 h-6 text-blue-600" />
+              <BookOpen className="w-6 h-6 text-highlight" />
             </div>
             <div className="h-px flex-1 bg-gray-200"></div>
           </div>
