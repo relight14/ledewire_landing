@@ -29,8 +29,8 @@ const Header: React.FC = () => {
             <img 
               src={Logo} 
               alt="LedeWire Logo"
-              className={`transition-all duration-300 ${
-                isScrolled ? 'w-26' : 'w-38'
+              className={`h-10 md:h-12 transition-all duration-300 object-contain ${
+                isScrolled ? 'w-28' : 'w-36'
               }`}
             />
           </div>
