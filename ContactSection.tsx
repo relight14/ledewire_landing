@@ -5,9 +5,10 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   return (
-    <Section id="contact" className="bg-white">
+    <Section id="contact" className="bg-white py-24">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information Section */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Get in Touch
@@ -16,10 +17,10 @@ const ContactSection: React.FC = () => {
               Have questions about LedeWire? Want to learn more about our platform? Drop us a line and we'll get back to you as soon as possible.
             </p>
             
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mr-4">
-                  <Mail size={20} />
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center text-blue-600">
+                  <Mail size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
@@ -32,9 +33,9 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mr-4">
-                  <MapPin size={20} />
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center text-blue-600">
+                  <MapPin size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Office</h3>
@@ -42,9 +43,9 @@ const ContactSection: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center text-blue-600 mr-4">
-                  <Phone size={20} />
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center text-blue-600">
+                  <Phone size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
@@ -54,7 +55,8 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-gray-50 rounded-xl p-8 shadow-sm">
+          {/* Subscription Form Section */}
+          <div className="bg-gray-50 rounded-xl p-8 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">
               Stay Updated
             </h3>
