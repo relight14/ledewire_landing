@@ -3,15 +3,15 @@ import Section from '../components/Section';
 
 const AboutSection: React.FC = () => {
   return (
-    <Section id="about" className="bg-white relative overflow-hidden">
+    <Section id="about" className="bg-white relative overflow-hidden py-24">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"></div>
-      <div className="absolute -left-24 top-40 w-48 h-48 bg-blue-50 rounded-full opacity-70 blur-2xl"></div>
-      <div className="absolute -right-24 bottom-20 w-64 h-64 bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute -left-32 top-40 w-48 h-48 bg-blue-50 rounded-full opacity-70 blur-2xl"></div>
+      <div className="absolute -right-32 bottom-20 w-64 h-64 bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
       
       <div className="relative">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             When Curiosity Leads, Everything Changes
           </h2>
           <p className="text-xl text-gray-700 leading-relaxed">
@@ -37,7 +37,7 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-xl">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Our Mission
             </h3>
@@ -49,7 +49,7 @@ const AboutSection: React.FC = () => {
                 We know what it's like to click on a story you want to read, only to walk away because you can't stomach another account or subscription.
               </p>
               <p>
-                <span className="font-medium">LedeWire reimagines the way knowledge flows.</span> No endless subscriptions. No ad-driven clickbait. Just meaningful work, accessible through simple micropayments — and a frictionless experience for both writers and readers.
+                <span className="font-medium text-blue-600">LedeWire reimagines the way knowledge flows.</span> No endless subscriptions. No ad-driven clickbait. Just meaningful work, accessible through simple micropayments — and a frictionless experience for both writers and readers.
               </p>
             </div>
           </div>
