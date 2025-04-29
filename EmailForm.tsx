@@ -12,7 +12,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email.trim()) {
       setMessage({ text: 'Please enter your email address', type: 'error' });
       return;
@@ -23,17 +23,17 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
 
     try {
       const response = await submitEmail(email);
-      
+
       if (response.success) {
         setMessage({ text: response.message, type: 'success' });
         setEmail('');
       } else {
         setMessage({ text: response.message, type: 'error' });
       }
-    } catch (error) {
-      setMessage({ 
-        text: 'Something went wrong. Please try again.', 
-        type: 'error' 
+    } catch {
+      setMessage({
+        text: 'Something went wrong. Please try again.',
+        type: 'error',
       });
     } finally {
       setIsSubmitting(false);
@@ -48,15 +48,15 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+            placeholder="you@example.com"
+            className="w-full px-4 py-3 rounded-xl border border-fog bg-white text-ink placeholder-ink/40 focus:border-highlight focus:ring-2 focus:ring-highlight/30 transition-all outline-none text-sm shadow-sm"
             disabled={isSubmitting}
           />
           {message && (
-            <p 
+            <p
               className={`mt-2 text-sm ${
                 message.type === 'success' ? 'text-green-600' : 'text-red-600'
-              } absolute`}
+              }`}
             >
               {message.text}
             </p>
@@ -65,9 +65,9 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm hover:shadow whitespace-nowrap disabled:opacity-70"
+          className="px-6 py-3 bg-highlight text-ink font-medium rounded-xl hover:bg-yellow-300 transition-colors duration-200 shadow-sm hover:shadow disabled:opacity-60 text-sm"
         >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          {isSubmitting ? 'Subscribing…' : 'Join Waitlist'}
         </button>
       </div>
     </form>
