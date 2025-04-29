@@ -25,12 +25,10 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src={Logo}
-              alt="LedeWire Logo"
-              className={`h-10 md:h-12 object-contain transition-all duration-300 ${
-                isScrolled ? 'w-28' : 'w-36'
-              }`}
+          <img
+            src={Logo}
+            alt="LedeWire Logo"
+            className={`max-h-12 md:max-h-16 object-contain transition-all duration-300`}
             />
           </div>
 
