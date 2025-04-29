@@ -1,5 +1,7 @@
 import React from 'react';
 import { BookOpen, Github, Twitter, Mail } from 'lucide-react';
+import Logo from '../assets/LedeWireLogo.png'; // or wherever it's located
+
 
 const Footer: React.FC = () => {
   return (
