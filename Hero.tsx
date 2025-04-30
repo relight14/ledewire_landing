@@ -27,26 +27,45 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Mock UI or Visual */}
-          <div className="hidden lg:block">
-            <div className="relative shadow-xl rounded-xl border border-neutral-200 bg-white overflow-hidden">
-              <div className="bg-neutral-100 px-4 py-2 flex items-center space-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                <div className="w-3 h-3 bg-green-400 rounded-full" />
-              </div>
-              <div className="px-6 py-8 space-y-6">
-                <div className="w-full h-6 bg-brand-yellow rounded-md" />
-                <div className="w-full h-48 bg-neutral-100 rounded-md" />
-                <div className="space-y-4">
-                  <div className="w-1/2 h-4 bg-neutral-300 rounded" />
-                  <div className="w-2/3 h-4 bg-neutral-200 rounded" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      {/* Mock UI or Visual */}
+<div className="hidden lg:block">
+  <div className="relative shadow-xl rounded-xl border border-neutral-200 bg-white overflow-hidden">
+    {/* Mock Window Controls */}
+    <div className="bg-neutral-100 px-4 py-2 flex items-center space-x-2">
+      <div className="w-3 h-3 bg-red-400 rounded-full" />
+      <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+      <div className="w-3 h-3 bg-green-400 rounded-full" />
+    </div>
+
+    {/* Mock Content */}
+    <div className="relative px-6 py-8 space-y-6">
+      {/* Label */}
+      <div className="absolute top-2 right-2 text-xs bg-neutral-200 px-2 py-0.5 rounded text-neutral-600">
+        Mock Preview
       </div>
 
+      {/* Title */}
+      <div className="text-xl font-semibold text-ink">
+        How Micropayments Are Changing Journalism
+      </div>
+
+      {/* Image Placeholder */}
+      <div className="w-full h-48 bg-neutral-100 rounded-md flex items-center justify-center text-neutral-400 text-sm italic">
+        [ Image or Chart Placeholder ]
+      </div>
+
+      {/* Description */}
+      <div className="space-y-2 text-sm text-neutral-700">
+        <p>Readers pay only for what they consume — no subscriptions, no ads.</p>
+        <p>Writers earn directly, with no platform gatekeeping.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          
       {/* Scroll Arrow */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center">
         <a 
