@@ -25,36 +25,25 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-          <img
-            src={Logo}
-            alt="LedeWire Logo"
-            className={`max-h-12 md:max-h-16 object-contain transition-all duration-300`}
+            <img
+              src={Logo}
+              alt="LedeWire Logo"
+              className="h-16 w-auto object-contain transition-all duration-300"
             />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-sm font-medium text-ink">
-            <a
-              href="#about"
-              className="hover:text-highlight transition-colors"
-            >
+            <a href="#about" className="hover:text-highlight transition-colors">
               About Us
             </a>
-            <a
-              href="#values"
-              className="hover:text-highlight transition-colors"
-            >
+            <a href="#values" className="hover:text-highlight transition-colors">
               Our Values
             </a>
-            <a
-              href="#contact"
-              className="hover:text-highlight transition-colors"
-            >
+            <a href="#contact" className="hover:text-highlight transition-colors">
               Contact
             </a>
           </nav>
-
-          {/* Mobile Menu Toggle (Optional Future Icon Button) */}
         </div>
 
         {/* Mobile Navigation */}
