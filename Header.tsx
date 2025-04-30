@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -17,18 +17,18 @@ const Header: React.FC = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-sm py-3'
-          : 'bg-white/80 backdrop-blur-md py-5'
+          ? 'bg-white shadow-sm py-2'
+          : 'bg-white/80 backdrop-blur-md py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <img
               src={Logo}
               alt="LedeWire Logo"
-              className="h-16 w-auto object-contain transition-all duration-300"
+              className="h-12 md:h-16 w-auto object-contain"
             />
           </div>
 
@@ -80,3 +80,5 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+
