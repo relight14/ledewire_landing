@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             <img
               src={Logo}
               alt="LedeWire Logo"
-              className="max-h-16 md:max-h-20 object-contain transition-all duration-300"
+              className="h-16 w-auto object-contain transition-all duration-300"
             />
           </div>
 
