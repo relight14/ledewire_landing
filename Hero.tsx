@@ -3,7 +3,7 @@ import EmailForm from '../components/EmailForm';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen bg-neutral-50 text-neutral-800 pt-24 pb-20">
+    <section className="relative min-h-screen bg-neutral-50 text-neutral-800 pt-32 pb-20">
       <div className="absolute top-0 left-0 w-full h-2 bg-brand-yellow" />
 
       <div className="container mx-auto px-6 max-w-6xl">
@@ -11,7 +11,9 @@ const Hero: React.FC = () => {
           {/* Textual Content */}
           <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight leading-tight text-neutral-900 mb-6">
-              Reclaim your attention. Rediscover quality.
+              Create freely. 
+              Earn fairly. 
+              Own your Content.
             </h1>
 
             <p className="text-lg sm:text-xl leading-relaxed text-neutral-700 mb-8">
