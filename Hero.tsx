@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                 {/* Image Placeholder */}
                 <div className="w-full h-48 bg-neutral-100 rounded-md flex items-center justify-center text-neutral-400 text-sm italic">
                   <img
-                    src="/path/to/your/image.jpg"
+                    src="'../assets/LedeWireLW.png'"
                     alt="Preview of micropayment article"
                     className="w-full h-48 object-cover rounded-md"
                   />
