@@ -1,5 +1,7 @@
 import React from 'react';
 import EmailForm from '../components/EmailForm';
+import previewImage from '../assets/LedeWireLW.png';
+
 
 const Hero: React.FC = () => {
   return (
@@ -53,7 +55,7 @@ const Hero: React.FC = () => {
                 {/* Image Placeholder */}
                 <div className="w-full h-48 bg-neutral-100 rounded-md flex items-center justify-center text-neutral-400 text-sm italic">
                   <img
-                    src="'../assets/LedeWireLW.png'"
+                    src={previewImage}
                     alt="Preview of micropayment article"
                     className="w-full h-48 object-cover rounded-md"
                   />
