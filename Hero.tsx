@@ -1,6 +1,6 @@
 import React from 'react';
 import EmailForm from '../components/EmailForm';
-import previewImage from '../assets/LedeWireLW.png';
+import previewImage from '../assets/localnews.jpg';
 
 
 const Hero: React.FC = () => {
