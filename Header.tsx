@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             <img
               src={Logo}
               alt="LedeWire Logo"
-              className="h-12 md:h-16 w-auto object-contain"
+              className="h-auto w-32 object-cover"
             />
           </div>
 
