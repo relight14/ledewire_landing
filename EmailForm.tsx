@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { submitEmail } from '../utils/api';
 
 interface EmailFormProps {
   className?: string;
@@ -14,7 +13,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
     e.preventDefault();
 
     if (!email.trim()) {
-      setMessage({ text: 'Please enter your email address', type: 'error' });
+      setMessage({ text: 'Please enter your email address.', type: 'error' });
       return;
     }
 
@@ -22,14 +21,18 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
     setMessage(null);
 
     try {
-      const response = await submitEmail(email);
+      const formData = new FormData();
+      formData.append('email', email);
 
-      if (response.success) {
-        setMessage({ text: response.message, type: 'success' });
-        setEmail('');
-      } else {
-        setMessage({ text: response.message, type: 'error' });
-      }
+      const response = await fetch('https://app.convertkit.com/forms/5e169ecd6e/subscriptions', {
+        method: 'POST',
+        mode: 'no-cors', // prevents CORS errors, but limits access to response
+        body: formData,
+      });
+
+      // Since no-cors doesn’t give us response info, we assume success
+      setMessage({ text: 'Thanks for subscribing! Check your inbox to confirm.', type: 'success' });
+      setEmail('');
     } catch {
       setMessage({
         text: 'Something went wrong. Please try again.',
@@ -51,6 +54,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ className = '' }) => {
             placeholder="you@example.com"
             className="w-full px-4 py-3 rounded-xl border border-fog bg-white text-ink placeholder-ink/40 focus:border-highlight focus:ring-2 focus:ring-highlight/30 transition-all outline-none text-sm shadow-sm"
             disabled={isSubmitting}
+            required
           />
           {message && (
             <p
